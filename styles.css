@@ -1,30 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: sans-serif;
-  background-color: #000000;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  color: #fff;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
 }
 
 h1 {
-  text-align: center;
-  color: #f7f6f6;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #00d4ff;
+  font-family: playfair display, serif;
+  font-weight: 700;
+}
+
+input{
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
   margin-bottom: 20px;
-  font-size: 2.5em;
-  font-family: monospace;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
 }
 
-.card {
-  background: rgb(255, 123, 0);
-  padding: 50px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  text-align: center;
-  font-size: larger;
+input:hover {
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.4);
 }
 
-.card img {
-  width: 100px;
-  border-radius: 50%;
+button {
+  background-color: #06c2e7;
+  color: #fff;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #00a6cc;
+}
+
+#output {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  color: #ffdd57;
+  min-height: 1.5em;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Animation trigger class */
+#output.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
 }
